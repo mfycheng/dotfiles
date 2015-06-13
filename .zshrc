@@ -57,25 +57,20 @@ export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Java stuff
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
 # Shell Aliases
 export PATH=/usr/local/bin:$PATH
-export ANDROID_HOME="/Users/mfycheng/android-sdk"
 
 # Editor
 export EDITOR="vim"
 
-# Python
-export PYTHONPATH="/Library/Python/2.7/site-packages"
-
-# Go
-export GOPATH="/Users/mfycheng/projects/go"
-export PATH=$PATH:$GOPATH/bin
-
-# Homebrew
-export PATH="/usr/local/sbin:$PATH"
+# Local Settings
+source $HOME/.zsh_local
 
 # Secrets
 source $HOME/.zsh_secrets
+
+# 256 Color Support
+if [ "$TERM" = "xterm" ]; then
+	export TERM="xterm-256color"
+fi
+
