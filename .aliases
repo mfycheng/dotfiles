@@ -1,0 +1,9 @@
+# Aliases for any bash type program to use. Simply add
+# if [-f ~/.aliases ]; then
+#     . ~/.aliases
+# fi
+
+alias l="ls -lh"
+alias ll="ls -lah"
+alias mongostart="launchctl start org.mongodb.mongod"
+alias mongostop="launchctl stop org.mongodb.mongod"
