@@ -70,6 +70,7 @@ command Q q
 
 " Airline
 set laststatus=2
+set guifont=Meslo\ LG\ S\ Regular\ For\ Powerline:h12
 let g:airline_powerline_fonts = 1
 
 " CtrlP
