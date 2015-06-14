@@ -54,9 +54,6 @@ source $HOME/.aliases
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # Shell Aliases
 export PATH=/usr/local/bin:$PATH
 
