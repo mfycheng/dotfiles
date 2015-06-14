@@ -42,6 +42,7 @@ set showcmd
 set wildmenu 		" Autocompletes things like filenames, (i.e. :e !/.vim<TAB>?)
 set lazyredraw		" Don't bother redrawing in the middle of macros, speeds them up
 set showmatch		" Parentheses/bracket highlighting
+set guioptions=t
 
 " Searching
 set incsearch					" Incremental search
@@ -70,7 +71,7 @@ command Q q
 
 " Airline
 set laststatus=2
-set guifont=Meslo\ LG\ S\ Regular\ For\ Powerline:h12
+set guifont=Meslo\ LG\ S\ 10
 let g:airline_powerline_fonts = 1
 
 " CtrlP
