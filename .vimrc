@@ -60,6 +60,7 @@ set foldnestmax=10		" Don't fold too much
 set foldmethod=indent	" Fold on indents
 
 " Movement
+nnoremap <C-n> :call NumberToggle()<cr>
 nnoremap B ^
 nnoremap E $
 nnoremap <C-Insert> :tabnew<CR>
@@ -134,6 +135,15 @@ function! UpdateTags()
 	call DelTagOfFile(f)
 	let resp = system(cmd)
 endfunction
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+
 
 " Autocmd
 autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
