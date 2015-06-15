@@ -48,6 +48,7 @@ set guioptions=t
 " Searching
 set incsearch					" Incremental search
 set hlsearch					" Highlight search result
+set ignorecase					" Ignore case
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Code Folding
@@ -79,7 +80,7 @@ vnoremap <C-C> "+y			" Copy  in visual mode
 
 " Airline
 set laststatus=2
-set guifont=Meslo\ LG\ S\ 10
+set guifont=Meslo\ LG\ M\ 9
 
 " CtrlP
 let g:ctrlp_match_window      = 'bottom,order:tbb'
