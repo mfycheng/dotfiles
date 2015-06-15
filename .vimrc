@@ -13,6 +13,7 @@ Plugin 'bling/vim-airline'
 Plugin 'powerline/powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
+Plugin 'fatih/vim-go'
 
 " All Plugins must be added before this line.
 call vundle#end()		" required
@@ -99,6 +100,9 @@ let g:ctrlp_user_command      = 'ag %s -l --nocolor --hidden -g ""'
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0
+
+" Golang
+let $GOPATH = "~/go"
 
 " Backups
 set backup

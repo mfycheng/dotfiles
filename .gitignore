@@ -1,5 +1,6 @@
 *
 !.gitignore
+!.agignore
 !.aliases
 !.vimrc
 !.vim/
