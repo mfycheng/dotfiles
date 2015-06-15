@@ -11,6 +11,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'powerline/powerline'
+Plugin 'Valloric/YouCompleteMe'
 
 " All Plugins must be added before this line.
 call vundle#end()		" required
@@ -28,7 +29,7 @@ filetype plugin indent on	" required
 let mapleader=","
 
 " Colors
-colorscheme Tomorrow
+colorscheme Tomorrow-Night
 syntax enable
 
 " Space and Tabs
@@ -69,16 +70,25 @@ command Wq wq
 command W w
 command Q q
 
+" GVim Stuff. Should maybe refactor this out,
+" since it varies a little between gvim and macvim
+let g:airline_powerline_fonts = 1
+nnoremap <C-V> "+gP			" Paste in normal mode
+inoremap <C-V> <ESC><C-V>i	" Paste in insert mode
+vnoremap <C-C> "+y			" Copy  in visual mode
+
 " Airline
 set laststatus=2
 set guifont=Meslo\ LG\ S\ 10
-let g:airline_powerline_fonts = 1
 
 " CtrlP
 let g:ctrlp_match_window      = 'bottom,order:tbb'
 let g:ctrlp_switch_buffer     = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command      = 'ag %s -l --nocolor --hidden -g ""'
+
+" YouCompleteMe
+let g:ycm_confirm_extra_conf = 0
 
 " Backups
 set backup
