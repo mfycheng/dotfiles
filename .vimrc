@@ -12,6 +12,7 @@ Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'powerline/powerline'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
 
 " All Plugins must be added before this line.
 call vundle#end()		" required
@@ -61,6 +62,10 @@ set foldmethod=indent	" Fold on indents
 " Movement
 nnoremap B ^
 nnoremap E $
+nnoremap <C-Insert> :tabnew<CR>
+nnoremap <C-Delete> :tabclose<CR>
+nnoremap <C-tab>    :tabnext<CR>
+nnoremap <C-S-tab>  :tabprevious<CR>
 
 " Leader Shortcuts
 nnoremap <leader>s :makesession<CR>
@@ -74,14 +79,16 @@ command Q q
 
 " GVim Stuff. Should maybe refactor this out,
 " since it varies a little between gvim and macvim
-let g:airline_powerline_fonts = 1
+set guifont=Meslo\ LG\ M\ 9
 nnoremap <C-V> "+gP			" Paste in normal mode
 inoremap <C-V> <ESC><C-V>i	" Paste in insert mode
 vnoremap <C-C> "+y			" Copy  in visual mode
 
 " Airline
 set laststatus=2
-set guifont=Meslo\ LG\ M\ 9
+let g:airline_powerline_fonts                 = 1
+let g:airline#extensions#tabline#enabled      = 1
+let g:airline#extensions#tabline#show_buffers = 1
 
 " CtrlP
 let g:ctrlp_match_window      = 'bottom,order:tbb'
@@ -100,12 +107,34 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Custom Functions
 function! <SID>StripTrailingWhitespace()
-		" Save last search & cursor position
-		let _s=@/
-		let l = line(".")
-		let c = col(".")
-		%s/\s/+$//e
-		let @/=_s
-		call cursor(l, c)
+	" Save last search & cursor position
+	let _s=@/
+	let l = line(".")
+	let c = col(".")
+	%s/\s/+$//e
+	let @/=_s
+	call cursor(l, c)
 endfunction
  
+function! DelTagOfFile(file)
+	let fullpath = a:file
+	let cwd = getcwd()
+	let tagfilename = cwd . "/tags"
+	let f = substitute(fullpath, cwd . "/", "", "")
+	let f = escape(f, './')
+	let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
+	let resp = system(cmd)
+endfunction
+
+function! UpdateTags()
+	let f = expand("%:p")
+	let cwd = getcwd()
+	let tagfilename = cwd . "/tags"
+	let cmd = 'ctags -a -f ' . tagfilename . ' --c++-kinds=+p --fields=+iaS --extra=+q ' . '"' . f . '"'
+	call DelTagOfFile(f)
+	let resp = system(cmd)
+endfunction
+
+" Autocmd
+autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
+
