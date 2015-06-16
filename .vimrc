@@ -111,7 +111,7 @@ let g:ycm_filepath_completion_use_working_dir = 1
 let g:ycm_global_ycm_extra_conf               = "~/.vim/.ycm_extra_conf.py"
 
 " Golang
-let $GOPATH = "~/go"
+let $GOPATH = "$HOME/go"
 
 " Backups
 set backup
