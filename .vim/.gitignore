@@ -3,3 +3,4 @@
 !syntax/
 !syntax/*
 .netrwhist
+.ycm_extra_conf.pyc

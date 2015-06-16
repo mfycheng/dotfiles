@@ -61,6 +61,7 @@ set foldnestmax=10		" Don't fold too much
 set foldmethod=indent	" Fold on indents
 
 " Movement
+set relativenumber
 nnoremap <C-n> :call NumberToggle()<cr>
 nnoremap B ^
 nnoremap E $
@@ -99,8 +100,9 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command      = 'ag %s -l --nocolor --hidden -g ""'
 
 " YouCompleteMe
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf                  = 0
+let g:ycm_filepath_completion_use_working_dir = 1
+let g:ycm_global_ycm_extra_conf               = "~/.vim/.ycm_extra_conf.py"
 
 " Golang
 let $GOPATH = "~/go"
