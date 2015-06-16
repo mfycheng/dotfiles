@@ -82,10 +82,16 @@ command Q q
 
 " GVim Stuff. Should maybe refactor this out,
 " since it varies a little between gvim and macvim
-set guifont=Meslo\ LG\ M\ 9
-nnoremap <C-V> "+gP			" Paste in normal mode
-inoremap <C-V> <ESC><C-V>i	" Paste in insert mode
-vnoremap <C-C> "+y			" Copy  in visual mode
+if has("gui_running")
+	if has("gui_gtk2")
+		set guifont=Meslo\ LG\ M\ 9
+		nnoremap <C-V> "+gP			" Paste in normal mode
+		inoremap <C-V> <ESC><C-V>i	" Paste in insert mode
+		vnoremap <C-C> "+y			" Copy  in visual mode
+	elseif has("gui_macvim")
+		set guifont=Meslo\ LG\ S\ Regular\ For\ Powerline:h12
+	endif
+endif
 
 " Airline
 set laststatus=2
