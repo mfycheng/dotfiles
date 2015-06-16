@@ -159,5 +159,5 @@ endfunc
 
 
 " Autocmd
-autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
+autocmd BufWritePost *.cpp,*.hpp,*.c call UpdateTags()
 
