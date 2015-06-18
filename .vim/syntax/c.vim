@@ -21,6 +21,12 @@ syn keyword	cRepeat		while for do
 
 syn keyword	cTodo		contained TODO FIXME XXX
 
+" Function Highlighting
+syn match       cCustomParen    "(" contains=cParen,cCppParen
+syn match       cCustomFunc     "\w\+\s*(" contains=cCustomParen
+syn match       cCustomScope    "::"
+syn match       cCustomClass    "\w\+\s*::" contains=cCustomScope
+
 " It's easy to accidentally add a space after a backslash that was intended
 " for line continuation.  Some compilers allow it, which makes it
 " unpredictable and should be avoided.
@@ -237,26 +243,26 @@ if exists("c_gnu")
   syn keyword	cStatement	__asm__
   syn keyword	cOperator	typeof __real__ __imag__
 endif
-syn keyword	cType		int long short char void
-syn keyword	cType		signed unsigned float double
+syn keyword	cBuiltInType		int long short char void
+syn keyword	cBuiltInType		signed unsigned float double
 if !exists("c_no_ansi") || exists("c_ansi_typedefs")
-  syn keyword   cType		size_t ssize_t off_t wchar_t ptrdiff_t sig_atomic_t fpos_t
-  syn keyword   cType		clock_t time_t va_list jmp_buf FILE DIR div_t ldiv_t
-  syn keyword   cType		mbstate_t wctrans_t wint_t wctype_t
+  syn keyword   cBuiltInType		size_t ssize_t off_t wchar_t ptrdiff_t sig_atomic_t fpos_t
+  syn keyword   cBuiltInType		clock_t time_t va_list jmp_buf FILE DIR div_t ldiv_t
+  syn keyword   cBuiltInType		mbstate_t wctrans_t wint_t wctype_t
 endif
 if !exists("c_no_c99") " ISO C99
-  syn keyword	cType		_Bool bool _Complex complex _Imaginary imaginary
-  syn keyword	cType		int8_t int16_t int32_t int64_t
-  syn keyword	cType		uint8_t uint16_t uint32_t uint64_t
-  syn keyword	cType		int_least8_t int_least16_t int_least32_t int_least64_t
-  syn keyword	cType		uint_least8_t uint_least16_t uint_least32_t uint_least64_t
-  syn keyword	cType		int_fast8_t int_fast16_t int_fast32_t int_fast64_t
-  syn keyword	cType		uint_fast8_t uint_fast16_t uint_fast32_t uint_fast64_t
-  syn keyword	cType		intptr_t uintptr_t
-  syn keyword	cType		intmax_t uintmax_t
+  syn keyword	cBuiltInType		_Bool bool _Complex complex _Imaginary imaginary
+  syn keyword	cBuiltInType		int8_t int16_t int32_t int64_t
+  syn keyword	cBuiltInType		uint8_t uint16_t uint32_t uint64_t
+  syn keyword	cBuiltInType		int_least8_t int_least16_t int_least32_t int_least64_t
+  syn keyword	cBuiltInType		uint_least8_t uint_least16_t uint_least32_t uint_least64_t
+  syn keyword	cBuiltInType		int_fast8_t int_fast16_t int_fast32_t int_fast64_t
+  syn keyword	cBuiltInType		uint_fast8_t uint_fast16_t uint_fast32_t uint_fast64_t
+  syn keyword	cBuiltInType		intptr_t uintptr_t
+  syn keyword	cBuiltInType		intmax_t uintmax_t
 endif
 if exists("c_gnu")
-  syn keyword	cType		__label__ __complex__ __volatile__
+  syn keyword	cBuiltInType		__label__ __complex__ __volatile__
 endif
 
 syn keyword	cStructure	struct union enum typedef
@@ -275,7 +281,7 @@ if !exists("c_no_c11")
   syn keyword	cStorageClass	_Noreturn noreturn
   syn keyword	cOperator	_Static_assert static_assert
   syn keyword	cStorageClass	_Thread_local thread_local
-  syn keyword   cType		char16_t char32_t
+  syn keyword   cBuiltInType		char16_t char32_t
 endif
 
 if !exists("c_no_ansi") || exists("c_ansi_constants") || exists("c_gnu")
@@ -405,14 +411,8 @@ endif
 syn match	cUserLabel	display "\I\i*" contained
 
 " Avoid recognizing most bitfields as labels
-syn match	cBitField	display "^\s*\I\i*\s*:\s*[1-9]"me=e-1 contains=cType
-syn match	cBitField	display ";\s*\I\i*\s*:\s*[1-9]"me=e-1 contains=cType
-
-" Highlight Class and Function Names
-syn match    cCustomParen    "(" contains=cParen,cCppParen
-syn match    cCustomFunc     "\w\+\s*(" contains=cCustomParen
-syn match    cCustomScope    "::"
-syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
+syn match	cBitField	display "^\s*\I\i*\s*:\s*[1-9]"me=e-1 contains=cBuiltInType
+syn match	cBitField	display ";\s*\I\i*\s*:\s*[1-9]"me=e-1 contains=cBuiltInType
 
 if exists("c_minlines")
   let b:c_minlines = c_minlines
@@ -467,7 +467,7 @@ hi def link cCppInWrapper	cCppOutWrapper
 hi def link cCppOutWrapper	cPreCondit
 hi def link cPreConditMatch	cPreCondit
 hi def link cPreCondit		PreCondit
-hi def link cType		Type
+" hi def link cBuiltInType	Type
 hi def link cConstant		Constant
 hi def link cCommentString	cString
 hi def link cComment2String	cString
@@ -481,8 +481,8 @@ hi def link cCppOutSkip		cCppOutIf2
 hi def link cCppInElse2		cCppOutIf2
 hi def link cCppOutIf2		cCppOut
 hi def link cCppOut		Comment
-hi def link cCustomFunc		Function
-hi def link cCustomClass	Function
+hi def link cCustomFunc         Function
+hi def link cCustomClass        Function
 
 let b:current_syntax = "c"
 
