@@ -14,6 +14,8 @@ Plugin 'powerline/powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " All Plugins must be added before this line.
 call vundle#end()		" required
