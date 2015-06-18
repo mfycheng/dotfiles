@@ -82,6 +82,7 @@ command WQ wq
 command Wq wq
 command W w
 command Q q
+nnoremap <C-S> :w<CR>
 
 " GVim Stuff. Should maybe refactor this out,
 " since it varies a little between gvim and macvim
