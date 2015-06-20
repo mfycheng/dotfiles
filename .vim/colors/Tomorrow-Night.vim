@@ -303,7 +303,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("cStatement", s:purple, "", "")
     call <SID>X("cppExceptions", s:purple, "", "")
     call <SID>X("cString", s:green, "", "")
-    call <SID>X("cSpecial", s:green, "", "")
+    call <SID>X("cSpecial", s:orange, "", "")
 
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")
