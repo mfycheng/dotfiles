@@ -59,7 +59,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " Code Folding
 set foldenable
-set foldlevelstart=10	" Start folding after 10
+set foldlevelstart=3    " Start folding after 10
 set foldnestmax=10		" Don't fold too much
 set foldmethod=indent	" Fold on indents
 
