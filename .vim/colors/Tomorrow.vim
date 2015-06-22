@@ -284,11 +284,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Vim Highlighting
 	call <SID>X("vimCommand", s:red, "", "none")
 
-	" C Highlighting
+	" C/C++ Highlighting
 	call <SID>X("cType", s:yellow, "", "")
 	call <SID>X("cStorageClass", s:purple, "", "")
 	call <SID>X("cConditional", s:purple, "", "")
 	call <SID>X("cRepeat", s:purple, "", "")
+    call <SID>X("cStatement", s:purple, "", "")
+    call <SID>X("cppExtensions", s:purple, "", "")
+    call <SID>X("cString", s:green, "", "")
+    call <SID>X("cSpecial", s:orange, "", "")
 
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")

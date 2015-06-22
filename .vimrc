@@ -59,7 +59,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " Code Folding
 set foldenable
-set foldlevelstart=10	" Start folding after 10
+set foldlevelstart=3    " Start folding after 10
 set foldnestmax=10		" Don't fold too much
 set foldmethod=indent	" Fold on indents
 
@@ -110,9 +110,10 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command      = 'ag %s -l --nocolor --hidden -g ""'
 
 " YouCompleteMe
+let g:ycm_global_ycm_extra_conf               = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf                  = 0
 let g:ycm_filepath_completion_use_working_dir = 1
-let g:ycm_global_ycm_extra_conf               = "~/.vim/.ycm_extra_conf.py"
+set completeopt-=preview
 
 " Golang
 let $GOPATH = "$HOME/go"
