@@ -305,6 +305,26 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("cString", s:green, "", "")
     call <SID>X("cSpecial", s:orange, "", "")
 
+    " Java Highlighting
+    call <SID>X("javaError", s:purple, "", "")
+    call <SID>X("javaConditional", s:purple, "", "")
+    call <SID>X("javaRepeat", s:purple, "", "")
+    call <SID>X("javaBoolean", s:purple, "", "")
+    call <SID>X("javaConstant", s:purple, "", "")
+    call <SID>X("javaSuper", s:purple, "", "")
+    call <SID>X("javaTypeDef", s:purple, "", "")
+    call <SID>X("javaOperator", s:purple, "", "")
+    call <SID>X("javaType", s:purple, "", "")
+    call <SID>X("javaStatement", s:purple, "", "")
+    call <SID>X("javaStorageClass", s:purple, "", "")
+    call <SID>X("javaExceptions", s:purple, "", "")
+    call <SID>X("javaExceptions", s:purple, "", "")
+    call <SID>X("javaAssert", s:purple, "", "")
+    call <SID>X("javaMethodDecl", s:purple, "", "")
+    call <SID>X("javaClassDecl", s:purple, "", "")
+    call <SID>X("javaFuncDef", s:blue, "", "")
+
+
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")
 	call <SID>X("phpKeyword", s:purple, "", "")
@@ -387,7 +407,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("luaCondElseif", s:purple, "", "")
 	call <SID>X("luaCond", s:purple, "", "")
 	call <SID>X("luaCondEnd", s:purple, "", "")
-	
+
 	" Clojure "highlighting
 	call <SID>X("clojureConstant", s:orange, "", "")
 	call <SID>X("clojureBoolean", s:orange, "", "")
@@ -412,7 +432,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("clojureAnonArg", s:blue, "", "")
 	call <SID>X("clojureRepeat", s:blue, "", "")
 	call <SID>X("clojureDispatch", s:blue, "", "")
-	
+
 	" Scala "highlighting
 	call <SID>X("scalaKeyword", s:purple, "", "")
 	call <SID>X("scalaKeywordModifier", s:purple, "", "")

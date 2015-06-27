@@ -115,6 +115,9 @@ let g:ycm_confirm_extra_conf                  = 0
 let g:ycm_filepath_completion_use_working_dir = 1
 set completeopt-=preview
 
+" Java
+let java_highlight_all = 1
+
 " Golang
 let $GOPATH = "$HOME/go"
 
@@ -134,7 +137,7 @@ function! <SID>StripTrailingWhitespace()
 	let @/=_s
 	call cursor(l, c)
 endfunction
- 
+
 function! DelTagOfFile(file)
 	let fullpath = a:file
 	let cwd = getcwd()
