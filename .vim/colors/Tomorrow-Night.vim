@@ -324,7 +324,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("javaClassDecl", s:purple, "", "")
     call <SID>X("javaFuncDef", s:blue, "", "")
 
-
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")
 	call <SID>X("phpKeyword", s:purple, "", "")

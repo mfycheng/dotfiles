@@ -33,8 +33,6 @@ syn match javaOK "\.\.\."
 syn match   javaError2 "#\|=<"
 JavaHiLink javaError2 javaError
 
-
-
 " keyword definitions
 syn keyword javaExternal	native package
 syn match javaExternal		"\<import\>\(\s\+static\>\)\?"
@@ -64,6 +62,10 @@ syn keyword javaBranch		break continue nextgroup=javaUserLabelRef skipwhite
 syn match   javaUserLabelRef	"\k\+" contained
 syn match   javaVarArg		"\.\.\."
 syn keyword javaScopeDecl	public protected private abstract
+
+" Function Highlighting (inline)
+syn match   javaCustomParen     "(" contains=javaParen
+syn match   javaCustomFunc      "\w\+\s*(" contains=javaCustomParen
 
 if exists("java_highlight_java_lang_ids")
   let java_highlight_all=1
@@ -330,6 +332,8 @@ if version >= 508 || !exists("did_java_syn_inits")
   JavaHiLink htmlComment		Special
   JavaHiLink htmlCommentPart		Special
   JavaHiLink javaSpaceError		Error
+
+  JavaHiLink javaCustomFunc             Function
 endif
 
 delcommand JavaHiLink
