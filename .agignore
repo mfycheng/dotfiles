@@ -1,9 +1,14 @@
 .git/
 bin/
 
+# General
+*.gz
+*.zip
+
 # C/C++
 *.out
 *.o
 
 # Java
 *.class
+*.jar
