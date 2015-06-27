@@ -1,4 +1,9 @@
 .git/
 bin/
+
+# C/C++
 *.out
 *.o
+
+# Java
+*.class
