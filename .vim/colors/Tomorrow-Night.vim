@@ -308,6 +308,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " Java Highlighting
     call <SID>X("javaError", s:purple, "", "")
     call <SID>X("javaConditional", s:purple, "", "")
+    call <SID>X("javaBranch", s:purple, "", "")
     call <SID>X("javaRepeat", s:purple, "", "")
     call <SID>X("javaBoolean", s:purple, "", "")
     call <SID>X("javaConstant", s:purple, "", "")
