@@ -43,6 +43,10 @@ set shiftwidth=4
 set expandtab
 set nowrap
 
+" Indenting
+set cindent
+set cinoptions=g0
+
 " UI Config
 set number
 set showcmd
