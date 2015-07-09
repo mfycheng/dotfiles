@@ -87,8 +87,8 @@ command Wq wq
 command W w
 command Q q
 nnoremap <C-S> :w<CR>
-nnoremap <S-Enter> o<Esc>k
-nnoremap <C-Enter> O<Esc>k
+nnoremap <C-Enter> o<Esc>k
+nnoremap <S-Enter> O<Esc>k
 
 " GVim Stuff. Should maybe refactor this out,
 " since it varies a little between gvim and macvim
