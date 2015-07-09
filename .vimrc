@@ -63,7 +63,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " Code Folding
 set foldenable
-set foldlevelstart=1    " Start folding after 10
+set foldlevelstart=3    " Start folding after 3
 set foldnestmax=10		" Don't fold too much
 set foldmethod=indent	" Fold on indents
 
@@ -87,6 +87,8 @@ command Wq wq
 command W w
 command Q q
 nnoremap <C-S> :w<CR>
+nnoremap <S-Enter> o<Esc>k
+nnoremap <C-Enter> O<Esc>k
 
 " GVim Stuff. Should maybe refactor this out,
 " since it varies a little between gvim and macvim
