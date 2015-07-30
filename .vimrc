@@ -10,7 +10,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
-Plugin 'powerline/powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
@@ -95,7 +94,7 @@ nnoremap <S-Enter> o<Esc>k
 " since it varies a little between gvim and macvim
 if has("gui_running")
 	if has("gui_gtk2")
-		set guifont=Meslo\ LG\ M\ 9
+		set guifont=Meslo\ LG\ M\ for\ Powerline\ 9
 		nnoremap <C-V> "+gP			" Paste in normal mode
 		inoremap <C-V> <ESC><C-V>i	" Paste in insert mode
 		vnoremap <C-C> "+y			" Copy  in visual mode
