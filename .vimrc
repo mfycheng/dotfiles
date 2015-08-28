@@ -124,9 +124,6 @@ set completeopt-=preview
 " Java
 let java_highlight_all = 1
 
-" Golang
-let $GOPATH = "$HOME/go"
-
 " Backups
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
