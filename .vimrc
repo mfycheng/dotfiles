@@ -172,4 +172,4 @@ endfunc
 " Autocmd
 autocmd BufWritePost *.cpp,*.hpp,*.c call UpdateTags()
 autocmd BufWritePre  * :%s/\s\+$//e
-
+autocmd BufRead *.cql set syntax=cql
