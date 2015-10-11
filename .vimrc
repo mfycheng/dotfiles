@@ -128,6 +128,8 @@ nmap <F8> :TagbarToggle<CR>
 let java_highlight_all = 1
 
 " Golang
+let g:go_def_mapping_enabled = 1
+
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
