@@ -46,8 +46,6 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 # Aliases File
 source $HOME/.aliases
 
@@ -65,6 +63,9 @@ source $HOME/.zsh_local
 
 # Secrets
 source $HOME/.zsh_secrets
+
+# After all local settings are set, 'call' oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # 256 Color Support
 if [ "$TERM" = "xterm" ]; then
