@@ -32,7 +32,7 @@ filetype plugin indent on	" required
 let mapleader=","
 
 " Colors
-colorscheme Tomorrow-Night
+colorscheme onedark
 syntax enable
 
 " Space and Tabs
@@ -94,7 +94,7 @@ nnoremap <S-Enter> o<Esc>k
 " since it varies a little between gvim and macvim
 if has("gui_running")
 	if has("gui_gtk2")
-		set guifont=Meslo\ LG\ M\ for\ Powerline\ 9
+		set guifont=Inconsolata\ for\ Powerline\ 12
 		nnoremap <C-V> "+gP			" Paste in normal mode
 		inoremap <C-V> <ESC><C-V>i	" Paste in insert mode
 		vnoremap <C-C> "+y			" Copy  in visual mode
