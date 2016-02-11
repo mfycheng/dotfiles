@@ -116,7 +116,7 @@ call s:h("Include", { "fg": s:blue }) " preprocessor #include
 call s:h("Define", { "fg": s:purple }) " preprocessor #define
 call s:h("Macro", {}) " same as Define
 call s:h("PreCondit", {}) " preprocessor #if, #else, #endif, etc.
-call s:h("Type", { "fg": s:yellow }) " int, long, char, etc.
+call s:h("Type", { "fg": s:purple }) " int, long, char, etc.
 call s:h("StorageClass", {}) " static, register, volatile, etc.
 call s:h("Structure", {}) " struct, union, enum, etc.
 call s:h("Typedef", {}) " A typedef
