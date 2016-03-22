@@ -23,3 +23,6 @@ gtest/
 
 # Leveldb test databases
 test.db/
+
+# Bittorrent Sync
+.sync/
