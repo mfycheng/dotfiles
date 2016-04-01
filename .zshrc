@@ -58,6 +58,9 @@ export PATH=/usr/local/bin:$PATH
 # Editor
 export EDITOR="vim"
 
+# `time` format
+export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
+
 # Local Settings
 source $HOME/.zsh_local
 
