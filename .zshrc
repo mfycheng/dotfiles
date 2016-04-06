@@ -46,9 +46,6 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-# Aliases File
-source $HOME/.aliases
-
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
@@ -74,6 +71,9 @@ source $ZSH/oh-my-zsh.sh
 if [ "$TERM" = "xterm" ]; then
 	export TERM="xterm-256color"
 fi
+
+# Aliases File
+source $HOME/.aliases
 
 # Grepping code!
 alias code_find="grep -inIEr --color=ALWAYS"
