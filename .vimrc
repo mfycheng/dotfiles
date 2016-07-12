@@ -10,7 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/neocomplete'
 Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
 Plugin 'xolox/vim-misc'
@@ -120,6 +120,21 @@ let g:ycm_global_ycm_extra_conf               = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf                  = 0
 let g:ycm_filepath_completion_use_working_dir = 1
 set completeopt-=preview
+
+" Neocomplete
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.go = '[^.[:digit:] *\t]\.'
+
+inoremap <expr> <C-j> pumvisible() ? '<C-n>' : '<C-j>'
+inoremap <expr> <C-k> pumvisible() ? '<C-p>' : '<C-k>'
+inoremap <expr> <TAB> pumvisible() ? '<C-n>' : '<TAB>'
+
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
