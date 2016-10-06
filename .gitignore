@@ -2,6 +2,7 @@
 !.gitignore
 !.agignore
 !.aliases
+!.atom/
 !.vimrc
 !.vim/
 !.vim/*
