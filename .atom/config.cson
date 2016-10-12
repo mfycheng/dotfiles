@@ -6,6 +6,8 @@
       "gometalinter-linter"
       "autocomplete-snippets"
     ]
+    telemetryConsent: "no"
+    useCustomTitleBar: true
   editor:
     fontSize: 12
   "exception-reporting":
