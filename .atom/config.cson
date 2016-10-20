@@ -12,5 +12,8 @@
     fontSize: 12
   "exception-reporting":
     userId: "594d4244-6314-c9dd-b858-b2fc4d4ee3bf"
+  "vim-mode":
+    useClipboardAsDefaultRegister: false
+    wrapLeftRightMotion: true
   welcome:
     showOnStartup: false
