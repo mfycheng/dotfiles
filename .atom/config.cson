@@ -12,5 +12,9 @@
     fontSize: 12
   "exception-reporting":
     userId: "594d4244-6314-c9dd-b858-b2fc4d4ee3bf"
+  "go-plus":
+    currentPanelHeight: "30.61111111111111vh"
+  "tester-go":
+    coverageHighlightMode: "disabled"
   welcome:
     showOnStartup: false
