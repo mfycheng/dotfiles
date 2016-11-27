@@ -16,5 +16,7 @@
     currentPanelHeight: "30.61111111111111vh"
   "tester-go":
     coverageHighlightMode: "disabled"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
