@@ -47,7 +47,7 @@ ZSH_THEME="agnoster"
 plugins=(git)
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
 
 # Shell Aliases
 export PATH=/usr/local/bin:$PATH
