@@ -16,5 +16,7 @@
   "vim-mode":
     useClipboardAsDefaultRegister: false
     wrapLeftRightMotion: true
+  "tester-go":
+    coverageHighlightMode: "disabled"
   welcome:
     showOnStartup: false
