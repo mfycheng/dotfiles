@@ -13,10 +13,10 @@
     tabLength: 4
   "exception-reporting":
     userId: "594d4244-6314-c9dd-b858-b2fc4d4ee3bf"
+  "tester-go":
+    coverageHighlightMode: "disabled"
   "vim-mode":
     useClipboardAsDefaultRegister: false
     wrapLeftRightMotion: true
-  "tester-go":
-    coverageHighlightMode: "disabled"
   welcome:
     showOnStartup: false
