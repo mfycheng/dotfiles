@@ -3,7 +3,6 @@
     useCoreMovementCommands: false
   core:
     disabledPackages: [
-      "gometalinter-linter"
       "autocomplete-snippets"
     ]
     telemetryConsent: "no"
@@ -13,6 +12,12 @@
     tabLength: 4
   "exception-reporting":
     userId: "594d4244-6314-c9dd-b858-b2fc4d4ee3bf"
+  "go-plus":
+    get: {}
+    lint:
+      args: [
+        "--disable-all"
+      ]
   "tester-go":
     coverageHighlightMode: "disabled"
   "vim-mode":
