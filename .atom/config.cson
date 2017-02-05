@@ -3,20 +3,27 @@
     useCoreMovementCommands: false
   core:
     disabledPackages: [
-      "gometalinter-linter"
       "autocomplete-snippets"
     ]
     telemetryConsent: "no"
     useCustomTitleBar: true
   editor:
     fontSize: 12
+    tabLength: 4
   "exception-reporting":
     userId: "594d4244-6314-c9dd-b858-b2fc4d4ee3bf"
   "go-plus":
-    currentPanelHeight: "30.61111111111111vh"
+    get: {}
+    lint:
+      args: [
+        "--disable-all"
+      ]
   "tester-go":
     coverageHighlightMode: "disabled"
   "tree-view":
     hideVcsIgnoredFiles: true
+  "vim-mode":
+    useClipboardAsDefaultRegister: false
+    wrapLeftRightMotion: true
   welcome:
     showOnStartup: false
