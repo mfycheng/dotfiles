@@ -9,10 +9,14 @@
     useCustomTitleBar: true
   editor:
     fontSize: 12
+    scrollPastEnd: true
     tabLength: 4
   "exception-reporting":
     userId: "594d4244-6314-c9dd-b858-b2fc4d4ee3bf"
   "go-plus":
+    disabledBundledPackages: [
+      "linter"
+    ]
     get: {}
     lint:
       args: [
@@ -22,7 +26,7 @@
     coverageHighlightMode: "disabled"
   "tree-view":
     hideVcsIgnoredFiles: true
-  "vim-mode":
+  "vim-mode-plus":
     useClipboardAsDefaultRegister: false
     wrapLeftRightMotion: true
   welcome:
