@@ -22,6 +22,10 @@
       args: [
         "--disable-all"
       ]
+    test:
+      runTestsOnSave: false
+  "one-dark-ui":
+    fontSize: 12
   "tester-go":
     coverageHighlightMode: "disabled"
   "tree-view":
