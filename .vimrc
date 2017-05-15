@@ -93,7 +93,7 @@ nnoremap <S-Enter> o<Esc>k
 " GVim Stuff. Should maybe refactor this out,
 " since it varies a little between gvim and macvim
 if has("gui_running")
-	if has("gui_gtk2")
+	if has("gui_gtk")
 		set guifont=Inconsolata\ for\ Powerline\ 12
 		nnoremap <C-V> "+gP			" Paste in normal mode
 		inoremap <C-V> <ESC><C-V>i	" Paste in insert mode
