@@ -29,6 +29,9 @@ filetype plugin indent on	" required
 " see :h vundle for more details or wiki or FAQ
 " Non Plugin stuff below
 
+" Ctags bug; project may be unmaintained
+let g:easytags_suppress_ctags_warning = 1
+
 let mapleader=","
 
 " Colors
