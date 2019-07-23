@@ -6,12 +6,6 @@
     "editor.rulers": [
         80
     ],
-    "explorer.confirmDragAndDrop": false,
-    "breadcrumbs.enabled": true,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "zenMode.hideLineNumbers": false,
-    "workbench.colorTheme": "One Dark Pro",
     "go.inferGopath": false,
     "go.testFlags": [
         "-v"
@@ -20,7 +14,6 @@
         "-local",
         "github.com/kikinteractive"
     ],
-    "go.formatTool": "goimports",
     "cSpell.userWords": [
         "Chans",
         "DBAPI",
@@ -32,11 +25,15 @@
         "Tracef",
         "Warnf",
         "Wrapf",
+        "XMPP",
         "aliaser",
         "aliasjid",
         "awsutil",
         "clientv",
+        "cmdutil",
         "commonv",
+        "convostatus",
+        "coreos",
         "deserialization",
         "deserialize",
         "dynamodb",
@@ -45,12 +42,16 @@
         "dynamodbiface",
         "etcd",
         "etcdserver",
+        "etcdtest",
         "fsutil",
         "godoc",
         "groupsv",
+        "invalidators",
+        "kikdev",
         "kikinteractive",
         "logrus",
         "mvcc",
+        "mvccpb",
         "protobuf",
         "ptrs",
         "repo",
@@ -63,7 +64,10 @@
         "xicommon",
         "xiphias",
         "xiphiasapp",
-        "xiutil"
+        "xiregistry",
+        "xiserver",
+        "xiutil",
+        "zkconfig"
     ],
     "cSpell.enabledLanguageIds": [
         "asciidoc",
@@ -93,5 +97,14 @@
         "typescript",
         "typescriptreact",
         "yml"
-    ]
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "breadcrumbs.enabled": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "zenMode.hideLineNumbers": false,
+    "workbench.colorTheme": "One Dark Pro",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "go.lintTool": "golangci-lint",
 }
