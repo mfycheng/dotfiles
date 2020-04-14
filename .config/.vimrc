@@ -40,9 +40,19 @@ nnoremap <C-S> :w<CR>
 nnoremap <C-Enter> O<Esc>k
 nnoremap <S-Enter> o<Esc>k
 
+" History and Scratch
+let g:netrw_dirhistmax = 0
+
 " Plugins
 call plug#begin("~/.vim/plugged")
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'fatih/vim-go'
+
 call plug#end()
+
+" fzf
+nnoremap <C-p> :FZF<CR>
 
 
 " Custom functions
