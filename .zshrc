@@ -53,7 +53,8 @@ export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=/usr/local/bin:$PATH
 
 # Editor
-export EDITOR="vim"
+export EDITOR="nvim"
+alias vim="nvim"
 
 # `time` format
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
