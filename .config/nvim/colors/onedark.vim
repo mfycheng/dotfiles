@@ -192,8 +192,11 @@ call s:h("javaScriptNumber", { "fg": s:dark_yellow })
 call s:h("rubyBlockParameterList", { "fg": s:red })
 call s:h("rubyInterpolation", { "fg": s:green })
 call s:h("rubyInterpolationDelimiter", { "fg": s:red })
-call s:h("goMethod", { "fg": s:cyan })
+
 call s:h("goFunction", { "fg": s:blue })
+call s:h("goFunctionCall", { "fg": s:cyan })
+call s:h("goFormatSpecifier", { "fg": s:yellow })
+call s:h("goField", { "fg": s:blue })
 
 " +---------------------+
 " | Plugin Highlighting |
