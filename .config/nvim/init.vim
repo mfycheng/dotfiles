@@ -3,6 +3,7 @@ colorscheme onedark
 
 let mapleader=","
 
+
 " Space and Tabs
 set tabstop=4
 set softtabstop=4
@@ -14,6 +15,9 @@ set nowrap
 set number
 set showcmd
 set showmatch
+set termguicolors " Seems to fix a lot of the color issues
+set guicursor=    " Compensate for the above. Personally don't like skinny cursor.
+
 
 " Movement
 set relativenumber
@@ -49,8 +53,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
-
-set termguicolors
 
 " fzf
 nnoremap <C-p> :FZF<CR>
