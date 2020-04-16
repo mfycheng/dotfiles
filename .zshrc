@@ -55,6 +55,7 @@ export PATH=/usr/local/bin:$PATH
 # Editor
 export EDITOR="nvim"
 alias vim="nvim"
+alias tmux="tmux -2"
 
 # `time` format
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
