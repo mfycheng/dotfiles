@@ -80,12 +80,13 @@ let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6"} " Alternate cter
 
 let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
-let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
+" Slight modification here to use the black from Tomorrow Night
+let s:black = { "gui": "#1D1F21", "cterm": "235", "cterm16": "0" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
 let s:comment_grey = { "gui": "#5C6670", "cterm": "59", "cterm16": "15" }
 let s:gutter_fg_grey = { "gui": "#636D83", "cterm": "238", "cterm16": "15" }
-let s:gutter_bg_grey = { "gui": "#2C313A", "cterm": "NONE", "cterm16": "NONE" }
+let s:gutter_bg_grey = { "gui": "#lD1F21", "cterm": "NONE", "cterm16": "NONE" }
 let s:cursor_grey =  { "gui": "#2C323B", "cterm": "236", "cterm16": "8" }
 let s:visual_grey = { "gui": "#3E4451", "cterm": "237", "cterm16": "15" }
 let s:special_grey = { "gui": "#383C45", "cterm": "238", "cterm16": "15" }

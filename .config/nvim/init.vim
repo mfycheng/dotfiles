@@ -33,15 +33,24 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 call plug#begin(stdpath('config'), '/plugged')
 
+" Fuzzy Finding
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Status bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Language Integration
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" Autocompletion
+"Plug 'ervandew/supertab'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'ervandew/supertab'
 
 call plug#end()
+
+set termguicolors
 
 " fzf
 nnoremap <C-p> :FZF<CR>
@@ -49,7 +58,7 @@ nnoremap <C-p> :FZF<CR>
 " vim-go
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
-let g:go_highlight_fields = 1
+let g:go_highlight_fields = 0
 let g:go_highlight_format_strings = 1
 
 " autocomplete
