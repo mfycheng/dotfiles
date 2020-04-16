@@ -18,7 +18,6 @@ set showmatch
 set termguicolors " Seems to fix a lot of the color issues
 set guicursor=    " Compensate for the above. Personally don't like skinny cursor.
 
-
 " Movement
 set relativenumber
 nnoremap <C-n> :call NumberToggle()<cr>
@@ -56,6 +55,9 @@ call plug#end()
 
 " fzf
 nnoremap <C-p> :FZF<CR>
+
+" airline
+let g:airline_powerline_fonts = 1
 
 " vim-go
 let g:go_highlight_functions = 1
