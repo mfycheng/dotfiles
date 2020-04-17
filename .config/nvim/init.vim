@@ -1,39 +1,3 @@
-syntax enable
-colorscheme onedark
-
-let mapleader=","
-
-
-" Space and Tabs
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set nowrap
-
-" UI Config
-set number
-set showcmd
-set showmatch
-set termguicolors " Seems to fix a lot of the color issues
-set guicursor=    " Compensate for the above. Personally don't like skinny cursor.
-
-" Movement
-set relativenumber
-nnoremap <C-n> :call NumberToggle()<cr>
-nnoremap B ^
-nnoremap E $
-nnoremap <C-Insert> :tabnew<CR>
-nnoremap <C-Delete> :tabclose<CR>
-nnoremap <C-tab>    :tabnext<CR>
-nnoremap <C-S-tab>  :tabprevious<CR>
-
-" Searching
-set incsearch					" Incremental search
-set hlsearch					" Highlight search result
-set ignorecase					" Ignore case
-nnoremap <leader><space> :nohlsearch<CR>
-
 call plug#begin(stdpath('config'), '/plugged')
 
 " Fuzzy Finding
@@ -53,11 +17,51 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
+syntax enable
+colorscheme onedark
+
+let mapleader=","
+
+" Space and Tabs
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set nowrap
+
+" UI Config
+set number
+set showcmd
+set showmatch
+set termguicolors " Seems to fix a lot of the color issues
+set guicursor=    " Compensate for the above. Personally don't like skinny cursor.
+
+" Code Folding
+set foldenable
+set foldlevelstart=10   " Start folding after 10
+set foldnestmax=10		" Don't fold too much
+set foldmethod=indent	" Fold on indents
+set foldignore=
+
+" Movement
+set relativenumber
+nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap B ^
+nnoremap E $
+
+" Searching
+set incsearch					" Incremental search
+set hlsearch					" Highlight search result
+set ignorecase					" Ignore case
+nnoremap <leader><space> :nohlsearch<CR>
+
 " fzf
 nnoremap <C-p> :FZF<CR>
 
 " airline
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts                 = 1
+let g:airline#extensions#tabline#enabled      = 1
+let g:airline#extensions#tabline#show_buffers = 0
 
 " vim-go
 let g:go_highlight_functions = 1
