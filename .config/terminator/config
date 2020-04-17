@@ -1,5 +1,6 @@
 [global_config]
 [keybindings]
+layout_launcher =
 [layouts]
   [[default]]
     [[[child1]]]
