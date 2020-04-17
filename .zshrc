@@ -68,6 +68,8 @@ source $HOME/.zsh_secrets
 # After all local settings are set, 'call' oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+autoload -U compinit && compinit
+
 # 256 Color Support
 if [ "$TERM" = "xterm" ]; then
 	export TERM="xterm-256color"
