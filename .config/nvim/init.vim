@@ -66,8 +66,10 @@ let g:go_highlight_fields = 0
 let g:go_highlight_format_strings = 1
 
 " autocomplete
-let g:SuperTabClosePreviewOnPopupClose = 1
 let g:deoplete#enable_at_startup = 1
+inoremap <expr> <C-j> pumvisible() ? '<C-n>' : '<C-j>'
+inoremap <expr> <C-k> pumvisible() ? '<C-p>' : '<C-k>'
+inoremap <expr> <TAB> pumvisible() ? '<C-n>' : '<TAB>'
 call deoplete#custom#option('omni_patterns', {
 \ 'go': '[^. *\t]\.\w*',
 \})
@@ -91,7 +93,7 @@ function! NumberToggle()
   else
     set relativenumber
   endif
-endfunc
+endfunction
 
 
 " Autocmd
