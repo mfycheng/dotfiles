@@ -55,6 +55,12 @@ set hlsearch					" Highlight search result
 set ignorecase					" Ignore case
 nnoremap <leader><space> :nohlsearch<CR>
 
+" Fix fat fingers
+command WQ wq
+command Wq wq
+command W w
+command Q q
+
 " fzf
 nnoremap <C-p> :FZF<CR>
 
