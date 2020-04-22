@@ -54,6 +54,7 @@ export PATH=/usr/local/bin:$PATH
 
 # Editor
 export EDITOR="nvim"
+export VIMRC="$HOME/.config/nvim/init.vim"
 alias vim="nvim"
 
 # `time` format
