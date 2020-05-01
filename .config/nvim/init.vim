@@ -110,3 +110,4 @@ endfunction
 
 " Autocmd
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
