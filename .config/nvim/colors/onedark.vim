@@ -198,6 +198,7 @@ call s:h("goFunction", { "fg": s:blue })
 call s:h("goFunctionCall", { "fg": s:cyan })
 call s:h("goFormatSpecifier", { "fg": s:yellow })
 call s:h("goField", { "fg": s:blue })
+call s:h("goBuiltins", { "fg": s:cyan })
 
 " +---------------------+
 " | Plugin Highlighting |
