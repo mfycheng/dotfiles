@@ -10,6 +10,11 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Language Integration
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'rust-lang/rust.vim'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 " Autocompletion
 "Plug 'ervandew/supertab'
@@ -86,6 +91,12 @@ call deoplete#custom#option('omni_patterns', {
 \ 'go': '[^. *\t]\.\w*',
 \})
 
+" language server
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ }
+
+
 " Custom functions
 fun! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -106,7 +117,6 @@ function! NumberToggle()
     set relativenumber
   endif
 endfunction
-
 
 " Autocmd
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
