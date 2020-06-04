@@ -25,6 +25,8 @@ call plug#end()
 syntax enable
 colorscheme onedark
 
+set hidden
+
 let mapleader=","
 
 " Space and Tabs
@@ -67,7 +69,7 @@ command W w
 command Q q
 
 " fzf
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :FZF --cycle<CR>
 
 " airline
 let g:airline_powerline_fonts                 = 1
