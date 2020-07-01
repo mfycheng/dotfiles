@@ -84,6 +84,7 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_fields = 0
 let g:go_highlight_format_strings = 1
 nnoremap <leader>b :GoBuild<CR>
+nnoremap <leader>t :GoTest<CR>
 
 " autocomplete
 let g:deoplete#enable_at_startup = 1
