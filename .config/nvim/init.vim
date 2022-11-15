@@ -56,6 +56,10 @@ nnoremap <C-n> :call NumberToggle()<cr>
 nnoremap B ^
 nnoremap E $
 
+" Quickfix
+nnoremap <leader>n :cnext
+nnoremap <leader>b :cprevious
+
 " Searching
 set incsearch					" Incremental search
 set hlsearch					" Highlight search result
@@ -74,7 +78,6 @@ nnoremap <C-p> :FZF --cycle<CR>
 " airline
 let g:airline_powerline_fonts                 = 1
 let g:airline#extensions#tabline#enabled      = 1
-let g:airline#extensions#tabline#show_buffers = 0
 
 " vim-go
 let g:go_rename_command = 'gopls'
@@ -91,6 +94,7 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr> <C-j> pumvisible() ? '<C-n>' : '<C-j>'
 inoremap <expr> <C-k> pumvisible() ? '<C-p>' : '<C-k>'
 inoremap <expr> <TAB> pumvisible() ? '<C-n>' : '<TAB>'
+inoremap <expr> <S-TAB> pumvisible() ? '<C-P>' : '<S-TAB>'
 call deoplete#custom#option('omni_patterns', {
 \ 'go': '[^. *\t]\.\w*',
 \})
