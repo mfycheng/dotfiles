@@ -57,8 +57,8 @@ nnoremap B ^
 nnoremap E $
 
 " Quickfix
-nnoremap <leader>n :cnext
-nnoremap <leader>b :cprevious
+nnoremap <leader>n :cnext<cr>
+nnoremap <leader>b :cprevious<cr>
 
 " Searching
 set incsearch					" Incremental search
