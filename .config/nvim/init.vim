@@ -127,6 +127,17 @@ function! NumberToggle()
   endif
 endfunction
 
+function! ThemeToggle()
+    " Setting to 'one' doesn't change all the colours (likely not defined).
+    " Rather than fix (which one day will be done), just do this hack.
+    if (g:colors_name == "one")
+        colorscheme onedark
+    else
+        colorscheme tomorrow
+        colorscheme one
+    endif
+endfunction
+
 " Autocmd
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
