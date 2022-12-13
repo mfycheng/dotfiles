@@ -127,7 +127,7 @@ function! NumberToggle()
   endif
 endfunction
 
-function! ThemeToggle()
+function! ToggleTheme()
     " Setting to 'one' doesn't change all the colours (likely not defined).
     " Rather than fix (which one day will be done), just do this hack.
     if (g:colors_name == "one")
