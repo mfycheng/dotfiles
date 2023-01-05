@@ -141,3 +141,4 @@ endfunction
 " Autocmd
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
+autocmd FileType qf wincmd J " Ensures quickfix goes to the very bottom (along all panes)
