@@ -41,7 +41,6 @@ set number
 set showcmd
 set showmatch
 set termguicolors " Seems to fix a lot of the color issues
-set guicursor=    " Compensate for the above. Personally don't like skinny cursor.
 
 " Code Folding
 set foldenable
