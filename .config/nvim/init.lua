@@ -737,7 +737,7 @@ require('lazy').setup {
     end,
   },
   { -- Golang
-    dir = '~/src/go.nvim',
+    'ray-x/go.nvim',
     dependencies = {
       'ray-x/guihua.lua',
       'neovim/nvim-lspconfig',
