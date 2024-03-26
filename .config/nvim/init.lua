@@ -96,6 +96,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Trim whitespace on save
+vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
+  pattern = { '*' },
+  command = [[%s/\s\+$//e]],
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -271,7 +277,6 @@ require('lazy').setup {
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
-
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -589,7 +594,6 @@ require('lazy').setup {
       }
     end,
   },
-
   { -- Colorscheme
     'folke/tokyonight.nvim',
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -676,6 +680,7 @@ require('lazy').setup {
       -- Installs the debug adapters for you
       'williamboman/mason.nvim',
       'jay-babu/mason-nvim-dap.nvim',
+      'nvim-neotest/nvim-nio',
     },
     config = function()
       local dap = require 'dap'
