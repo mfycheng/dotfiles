@@ -606,6 +606,11 @@ require('lazy').setup {
       vim.cmd.hi 'Comment gui=none'
     end,
   },
+  {
+    'chriskempson/base16-vim',
+    lazy = false,
+    priority = 1000,
+  },
   -- Highlight todo, notes, etc in comments
   {
     'folke/todo-comments.nvim',
