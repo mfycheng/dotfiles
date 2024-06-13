@@ -42,6 +42,7 @@ vim.opt.splitbelow = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevel = 100
