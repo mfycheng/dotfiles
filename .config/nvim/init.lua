@@ -216,7 +216,18 @@ require('lazy').setup {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
-        -- pickers = {}
+        pickers = {
+          find_files = {
+            find_command = {
+              'fd',
+              '.',
+              '--type',
+              'file',
+              '--hidden',
+              '--strip-cwd-prefix',
+            },
+          },
+        },
         defaults = {
           mappings = {
             i = {
