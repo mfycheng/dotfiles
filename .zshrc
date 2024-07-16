@@ -60,6 +60,9 @@ alias vim="nvim"
 # `time` format
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
+# Enable vim mode
+bindkey -v
+
 # Local Settings
 source $HOME/.zsh_local
 
