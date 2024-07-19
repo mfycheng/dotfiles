@@ -62,6 +62,7 @@ export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # Enable vim mode
 bindkey -v
+bindkey -M viins '^R' history-incremental-search-backward # This is not present in vi mode
 
 # Local Settings
 source $HOME/.zsh_local
