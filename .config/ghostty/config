@@ -1,0 +1,18 @@
+# Font selection
+font-size = 12
+font-family = "Monaco"
+
+# Cursor Settings (block)
+cursor-style = block
+shell-integration-features = no-cursor
+
+# Visual / Theme Settings
+theme = "dark:Tomorrow Night Custom,light:Tomorrow"
+background-opacity = 0.95
+
+# MacOS
+macos-titlebar-style = tabs
+macos-icon = "custom-style"
+macos-icon-frame = "plastic"
+macos-icon-ghost-color = "#47d696"
+macos-icon-screen-color = "#27292b"
