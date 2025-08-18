@@ -78,6 +78,9 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- Close quickfix window
 vim.keymap.set('n', '<leader>w', vim.cmd.cclose, { desc = 'Close quickfix' })
 
+-- Toggle one dark
+vim.keymap.set('n', '<leader>tc', '<CMD>lua require("onedark").toggle()<CR>')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -650,16 +653,27 @@ require('lazy').setup {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- Load the colorscheme here
-      vim.cmd.colorscheme 'tokyonight-night'
+      -- vim.cmd.colorscheme 'tokyonight-night'
 
       -- You can configure highlights by doing something like
-      vim.cmd.hi 'Comment gui=none'
+      -- vim.cmd.hi 'Comment gui=none'
     end,
   },
   {
     'chriskempson/base16-vim',
     lazy = false,
     priority = 1000,
+  },
+  {
+    'navarasu/onedark.nvim',
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require('onedark').setup {
+        style = 'dark', -- or 'darker', 'cool', 'deep', 'warm', 'warmer'
+        toggle_style_list = { 'dark', 'light' },
+      }
+      require('onedark').load()
+    end,
   },
   -- Highlight todo, notes, etc in comments
   {
