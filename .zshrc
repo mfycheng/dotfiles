@@ -46,6 +46,13 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+# Add OS-specific plugins
+case "$(uname -s)" in
+    Darwin*)
+        plugins+=(brew macos)
+        ;;
+esac
+
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
 
