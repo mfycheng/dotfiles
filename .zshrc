@@ -95,3 +95,4 @@ alias code_find="grep -inIEr --color=ALWAYS"
 
 alias tf="terraform"
 alias tmux="tmux -2"
+alias k="kubectl"
