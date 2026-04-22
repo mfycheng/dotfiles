@@ -14,6 +14,6 @@ background-opacity = 0.95
 macos-titlebar-style = tabs
 macos-icon = "custom-style"
 macos-icon-frame = "plastic"
-macos-icon-ghost-color = "#47d696"
-macos-icon-screen-color = "#27292b"
+macos-icon-ghost-color = "#47D696"
+macos-icon-screen-color = "#27292B"
 keybind = shift+enter=text:\n
