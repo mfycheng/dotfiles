@@ -71,14 +71,14 @@ export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 bindkey -v
 bindkey -M viins '^R' history-incremental-search-backward # This is not present in vi mode
 
+# After all local settings are set, 'call' oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 # Local Settings
 source $HOME/.zsh_local
 
 # Secrets
 source $HOME/.zsh_secrets
-
-# After all local settings are set, 'call' oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
 autoload -U compinit && compinit
 
