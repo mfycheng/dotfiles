@@ -685,6 +685,14 @@ require('lazy').setup {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
   },
+  { -- Render markdown inline (headings, lists, code blocks, tables, checkboxes)
+    'MeanderingProgrammer/render-markdown.nvim',
+    ft = { 'markdown' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+  },
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
@@ -741,7 +749,7 @@ require('lazy').setup {
       local ts = require 'nvim-treesitter'
       ts.setup {}
 
-      local ensure_installed = { 'bash', 'c', 'go', 'gomod', 'gosum', 'gowork', 'html', 'lua', 'markdown', 'markdown_inline', 'vim', 'vimdoc' }
+      local ensure_installed = { 'bash', 'c', 'go', 'gomod', 'gosum', 'gowork', 'html', 'lua', 'markdown', 'markdown_inline', 'vim', 'vimdoc', 'yaml' }
       ts.install(ensure_installed)
 
       local installed = {}
