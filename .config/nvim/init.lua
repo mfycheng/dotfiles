@@ -739,6 +739,7 @@ require('lazy').setup {
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main', -- pin to the rewrite; without this Lazy assumes the repo default (master)
     lazy = false, -- the main branch does not support lazy-loading
     build = ':TSUpdate',
     config = function()
